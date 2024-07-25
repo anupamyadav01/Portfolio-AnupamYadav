@@ -10,21 +10,6 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <>
-      <AnimatedCursor
-        color="#fff"
-        // innerSize={10}
-        // outerSize={40}
-        innerScale={1}
-        outerScale={1.4}
-        outerAlpha={0}
-        outerStyle={{
-          background: "#ffffff",
-          mixBlendMode: "exclusion",
-        }}
-        innerStyle={{
-          backgroundColor: "#F94892",
-        }}
-      />
       <div>
         {/* <Navbar /> */}
         <HomeBanner id="home" />
