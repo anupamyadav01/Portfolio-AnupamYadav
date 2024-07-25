@@ -1,0 +1,142 @@
+.home .content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .content .wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home .content .name {
+  white-space: nowrap;
+  font-size: 100px;
+  font-weight: 500;
+  height: fit-content;
+  width: fit-content;
+}
+
+.home .content .staticTitle {
+  font-size: 50px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.home .content .staticTitle .hrLine {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+  margin-left: 20px;
+  width: 10vw;
+}
+
+.home .content .dynamicTitle {
+  font-size: 50px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.home .content .dynamicTitle li {
+  width: 100%;
+  z-index: -1;
+}
+
+@keyframes slider {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 42%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* .home .content .dynamicTitle li span {
+  white-space: wrap;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 175, 246),
+    rgb(255, 111, 233),
+    rgb(255, 0, 195)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+} */
+
+/* .home .content .dynamicTitle li span::before {
+  content: "";
+  width: 100%;
+  height: 20%;
+  z-index: -1;
+} */
+
+/* .mask .bg {
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -3;
+} */
+
+@media screen and (max-width: 950px) {
+  .mask .bg {
+    opacity: 40%;
+  }
+
+  .home .content .staticTitle {
+    font-size: 90px;
+  }
+
+  .home .content .dynamicTitle {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home .content {
+    align-items: center;
+    padding: 0 12vw;
+  }
+  .home .content .name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+
+  .home .content .staticTitle {
+    font-size: 12vw;
+  }
+
+  .home .content .staticTitle .hrLine {
+    width: 22vw;
+  }
+
+  .home .content .dynamicTitle {
+    font-size: 12vw;
+    line-height: 60px;
+  }
+
+  .hire {
+    font-size: 16px;
+  }
+}
