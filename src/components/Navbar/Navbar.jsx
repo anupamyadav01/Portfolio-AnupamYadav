@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./NavbarStyle.css";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import {
   FaGithub,
   FaInstagram,
@@ -8,8 +8,11 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const handleCLick = () => setClick(!click);
 
@@ -30,46 +33,22 @@ export default function Navbar() {
         <Link
           className="navLink"
           to="/projects"
-          spy={true}
-          smooth={true}
-          duration={30}
+          onClick={() => navigate("/projects")}
         >
           Projects
         </Link>
-        <Link
-          className="navLink"
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={30}
-        >
+        <Link className="navLink" to="/about">
           About
         </Link>
-        <Link
-          className="navLink"
-          to="skills"
-          spy={true}
-          smooth={true}
-          duration={30}
-        >
+        <Link className="navLink" to="/skills">
           Skills
         </Link>
-        <Link
-          className="navLink"
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={30}
-        >
+        <Link className="navLink" to="/contact">
           Contact
         </Link>
       </div>
       <div className={click ? "social-links active" : "social-links"}>
-        <a
-          href="https://www.linkedin.com/in/anupamyadav01/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.linkedin.com/in/anupamyadav01/" target="_blank">
           <FaLinkedin
             className="social"
             size={25}

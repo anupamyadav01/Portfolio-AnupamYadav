@@ -21,7 +21,7 @@ export default function AboutMe({ id }) {
           explore my resume.
         </a>
       </div>
-      <div className="profile-photo">
+      <div className="profile-photo border border-white">
         <div className="heading"> About Me</div>
         <img className="img" src={myProfile} alt="Profile" />
       </div>

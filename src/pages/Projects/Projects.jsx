@@ -2,8 +2,8 @@ import "./Projects.css";
 
 const Projects = () => {
   return (
-    <div className="projects">
-      <h1>My Projects</h1>
+    <div className="w-full text-center border border-white p-2">
+      Projects Section
     </div>
   );
 };
